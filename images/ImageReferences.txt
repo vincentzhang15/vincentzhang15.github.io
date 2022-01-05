@@ -1,0 +1,29 @@
+GalaxyBackground: https://www.peakpx.com/en/hd-wallpaper-desktop-owkyn
+IBLogo: https://iconape.com/ib-international-baccalaureate-logo-logo-icon-svg-png.html
+UofTLogo: https://www.freelogovectors.net/university-of-toronto-logo/
+JavaLogo: https://seeklogo.com/vector-logo/273556/java
+PythonLogo: https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg
+VueLogo: https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg
+ReactLogo: https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg
+HTMLLogo: https://seeklogo.com/vector-logo/184157/html5-without-wordmark-color
+CSSLogo: https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg
+JSLogo: https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg
+TensorflowLogo: https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg
+CppLogo: https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg
+CLogo: https://upload.wikimedia.org/wikipedia/commons/archive/3/35/20190417225046%21The_C_Programming_Language_logo.svg
+TuringLogo: https://upload.wikimedia.org/wikipedia/en/1/10/Turing_logo.gif
+PHPLogo: https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg
+GoLogo: https://seeklogo.com/vector-logo/273203/go
+HaskellLogo: https://www.haskell.org/img/haskell-logo.svg
+PerlLogo: https://worldvectorlogo.com/logo/perl
+CsLogo: https://worldvectorlogo.com/logo/c--4
+DOSBatchLanguage: https://all-free-download.com/free-icon/download/ms-dos-batch-file_98211.html
+MySQLLogo: https://pnghut.com/download/ExnbiD7THZ
+jQueryLogo: https://www.pngegg.com/en/png-psaxr/download
+
+SVG Crop
+https://stackoverflow.com/questions/33877301/how-to-remove-blank-space-around-svg
+https://svgcrop.com/
+
+PNG Crop
+https://onlinepngtools.com/crop-png

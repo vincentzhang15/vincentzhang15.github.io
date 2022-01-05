@@ -1,0 +1,409 @@
+/*
+Personal Website Project
+@author Vincent Zhang
+@since 28 December 2021 - 04 January 2022
+*/
+
+
+/**********************************************************************************
+**************************** OVERALL DOCUMENT STYLES *****************************/
+:root {
+    --background-color: #121212;
+
+    --hover-color: #48e9b3;
+    --card-color: #1d1d1d;
+    --major-color: #c1c1c1;
+    --minor-color: #a8a8a8;
+    --fall2021-color: #252842;
+
+    --color-nav-left: rgb(0, 96, 134, 0.9);
+    --color-nav-right: rgb(0, 221, 203, 0.8);
+    --color-nav-link: white;
+    --color-nav-hover: #7FFFD4;
+
+    --color-home-h1: white;
+    --color-footer: white;
+
+    --color-perfect-top: rgb(35, 255, 163);
+    --color-perfect-bot: rgb(208, 211, 26);
+
+    --color-yt: red;
+    --color-github: #aaa;
+    --color-linkedin: #0e76a8;
+    --color-devpost: #006c94;
+    --color-email: rgb(201, 57, 236);
+    --color-web: rgb(218, 215, 49);
+
+    --small-icon-spacing: 12px;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth
+}
+body {
+    font-size: 18px;
+    font-family: "Helvetica", sans-serif;
+    background-color: var(--background-color);
+    color: var(--minor-color);
+}
+section {
+    padding-top: 80px;
+}
+h1 {
+    font-size: 120%;
+    color: var(--major-color);
+}
+h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 140%;
+}
+h3 {
+    text-align: right;
+}
+p {
+    font-size: 105%;
+}
+
+i, .iconify {
+    font-size:30px;
+}
+i:hover, .iconify:hover{
+    color: var(--hover-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.fa-youtube {
+    color: var(--color-yt);
+}
+.fa-github {
+    color: var(--color-github);
+}
+.fa-linkedin {
+    color: var(--color-linkedin);
+}
+.fa-envelope {
+    color: var(--color-email);
+}
+.icon-devpost {
+    color: var(--color-devpost);
+}
+.visit-web {
+    color: var(--color-web);
+    font-size: 33px;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+.block {
+    display: inline-block;
+    margin: 20px;
+}
+
+
+/* Use: Resume button. */
+.button{
+    text-decoration: none;
+}
+.button > div, .btn-showhide{
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.button > div:hover, .btn-showhide:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* Use: Hide/Show All button. */
+.btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+/* Gradient border reference: https://codepen.io/mike-schultz/pen/NgQvGO */
+.gradient-border {
+    --borderWidth: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Gradient border end */
+
+
+
+
+/********************************************************************************
+**************************** NAVIGATION BAR STYLES *****************************/
+#nav-bg {
+    position: absolute;
+    display: none;
+    float: left;
+    background-image: linear-gradient(to bottom right, var(--color-nav-left), var(--color-nav-right));
+    width: 100%;
+    height: 60px;
+    z-index: -1;
+}
+nav {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+#navbar {
+    padding: 18px;
+    padding-right: 5vw;
+}
+
+/* Navbar content style. */
+#navbar ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+#navbar li {
+    display: inline;
+    margin: 0 10px;
+}
+#navbar a {
+    color: var(--color-nav-link);
+    text-decoration: none;
+}
+#navbar a:hover {
+    color: var(--color-nav-hover);
+    text-decoration: none;
+}
+#navbar #logo {
+    font-weight: bold;
+}
+
+
+/******************************************************************************
+**************************** HOME SECTION STYLES *****************************/
+#home {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 35vh 8vw;
+}
+#home h1 {
+    color: var(--color-home-h1);
+    line-height: 1.5;
+}
+#name {
+    font-size: 220%;
+}
+#home .profile i{
+    font-size: 50px;
+    margin-right: 20px;
+}
+.profile {
+    margin-top: 15px;
+}
+#home > *, #profile-data > * {
+    margin-bottom: 15px;
+}
+
+#home > .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url("../images/GalaxyBackground.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Galaxy styles. */
+#starry-galaxy {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+}
+star {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8);
+
+    transition: all 0.5s ease-in-out;
+    animation: flash;
+    animation-duration: 5s;
+}
+star:after, star:before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: calc(50% - 1px);
+    left: -34px;
+
+    width: 80px;
+    height: 2px;
+
+    background-image: linear-gradient(to left, transparent, white, transparent);
+}
+star:before {
+    left: calc(50% - 1px);
+    top: -34px;
+
+    width: 2px;
+    height: 80px;
+    
+    background-image: linear-gradient(to bottom, transparent, white, transparent);
+}
+@keyframes flash {
+    0% {
+        transform: scale(0.1) rotate(-500deg);
+    }
+    60% {
+        transform: scale(0.8) rotate(180deg);
+    }
+    100% {
+        transform: scale(0.1) rotate(-100deg);
+    }
+}
+
+
+
+/*******************************************************************************
+**************************** ABOUT SECTION STYLES *****************************/
+#about img {
+    width: 100%;
+}
+#about i {
+    font-size: 150px;
+}
+#about i:hover {
+    cursor: auto;
+}
+#about .block {
+    width: 200px;
+}
+
+#about .fa-award {
+    /* Gradient color reference: https://codepen.io/P1N2O/pen/pyBNzX */
+    background: linear-gradient(-120deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+#about .fa-graduation-cap {
+    background:linear-gradient(-120deg, #4285f4, #34a853, #fbbc05);
+}
+#about .fas {
+    -webkit-background-clip: text; /* Support Webkit and Blink graphics rendering engine browsers: Edge, Chrome, Opera, Safari. */
+    background-clip: text; /* Firefox: Gecko*/
+    background-size: 400% 400%;
+    color: transparent;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.uoftLogo {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(#64e68f, #91cde5);
+    background-attachment: fixed;
+}
+
+
+/**********************************************************************************
+**************************** PROJECTS SECTION STYLES *****************************/
+#projects .icon-image {
+    text-align: center;
+    background-color: #006c94;
+}
+#projects .icon-image > .iconify {
+    font-size: 200px;
+    text-align: center;
+}
+#projects .icon-image > .iconify:hover {
+    cursor: default;
+}
+
+/********************************************************************************
+**************************** SKILLS SECTION STYLES *****************************/
+#skills .row {
+    text-align: center;
+}
+#skills .container {
+    max-width: 900px;
+}
+#skills .block {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+#skills img {
+    width: 110px;
+}
+
+/*************************************************************************
+**************************** FOOTER SECTION *****************************/
+#footer {
+    background-color: rgb(13, 105, 105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 88px;
+    margin-top: 50px;
+    color: var(--color-footer);
+}
+

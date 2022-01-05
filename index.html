@@ -1,0 +1,605 @@
+<!--
+Personal Website Project
+@author Vincent Zhang
+@since 28 December 2021 - 04 January 2022
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> <!-- Icons (Github, YT, LinkedIn). -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/custom-elements.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <!-- Bootstrap smooth scroll. -->
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script> <!-- Devpost icon. Website icon. -->
+    <script src="js/main.js"></script>
+    <script src="js/custom-elements.js"></script>
+
+    <base target="_blank"> <!-- Open all links in new tab. Reference: https://stackoverflow.com/questions/24428476/target-blank-in-all-link -->
+
+    <title>Vincent Zhang Portfolio</title>
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav-bg"></div>
+        <div id="navbar">
+            <ul>
+                <li id="logo"><a target="_self" href="#home">VZ</a></li>
+                <li><a target="_self" href="#about">About</a></li>
+                <li><a target="_self" href="#experience">Experience</a></li>
+                <li><a target="_self" href="#skills">Skills</a></li>
+                <li><a target="_self" href="#projects">Projects</a></li>
+                <li><a target="_self" href="#education">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="home">
+        <div class="background"></div>
+
+        <!-- Wrapper div is necessary to prevent star jumping. -->
+        <div id="starry-galaxy"><div class="background-stars"></div></div>
+        
+        <div id="profile-data">
+            <div>
+                <h1 id="name">Vincent Zhang</h1>
+                <h1>University of Toronto</h1>
+                <h1>Co-Op Computer Science</h1>
+            </div>
+
+            <a href="https://github.com/vincentzhang15/projects-for-school/blob/main/Resume/Resume.pdf" class="button">
+                <div>R&eacute;sum&eacute;</div>
+            </a>
+        
+            <div class="profile">
+                <a href="https://www.linkedin.com/in/vincent-zhang-345bb1227/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/vincentzhang15"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/channel/UCuXENWYQf6pwjQEVhmeKN3w"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="container">
+            <square-elem img="img_ut" cls="uoftLogo" label="4.0 (/4.0) cumulative GPA (2021 - Present)"></square-elem>
+            <square-elem img="img_ib" label="IB Alumnus<br />(Top 9% Wordwide 2021)"></square-elem>
+            <square-elem img="icon_award" label="Computer Science and Engineering Award<br />(Class of 2021)"></square-elem>
+            <square-elem img="icon_grad" label="Ontario Scholar (97.0% Top 6 Course Average 2021)"></square-elem>
+            <square-elem img="img_euclid" label="University of Waterloo Math Contests Top 25% Distinction (2021, 2020, 2019, 2017)"></square-elem>
+        </div>
+    </section>
+
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="box">
+            <card-elem
+                title="Event Host"
+                subtitle="Final Exam Review for Introduction to Computer Science I"
+                description="Reviewed a 3-month course in 2.5 hours while taking the course. Prepared presentation material (content, slides, code) in 2 days."
+                date="8 December 2021"
+                imgsrc="images/experience/IntroToCS.png"
+                grade=""
+                tools="py"
+                locations="yt,https://www.youtube.com/watch?v=l2aJFMuKpz8 github,https://github.com/vincentzhang15/exam-review-intro-to-comp-sci"
+            ></card-elem>
+            <card-elem
+                title="President"
+                subtitle="Computer Club"
+                description="Taught competitive programming using Python 3, sometimes Java and C++."
+                date="2020-2021"
+                imgsrc="images/experience/ComputerClub.png"
+                grade=""
+                tools="py java cpp"
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="President"
+                subtitle="Programming Club"
+                description="Taught competitive programming using C++ and Java."
+                date="2019-2020"
+                imgsrc="images/experience/ProgrammingClub.png"
+                grade=""
+                tools="cpp java"
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Team Captain"
+                subtitle="Robotics Team"
+                description="- our team won the 2019 Toronto VEX Energy Award
+                - provided a positive role model of commitment, intensity, confidence, composure, and hustle
+                - inspired hope and optimism in difficult times
+                - cared for the safety and well-being of every member
+                - exemplified 110% effort at every meeting and game
+                - left a legacy of excellence and passion for robotics
+                - led the planning, designing, construction, and programming of our competition robot
+                "
+                date="2019-2021"
+                imgsrc="images/experience/RoboticsTeam.png"
+                grade=""
+                tools=""
+                locations=""
+                glow
+            ></card-elem>
+            <card-elem
+                title="Lead Programmer"
+                subtitle="Robotics Team"
+                description="- developed a polar vector equation that accurately calculates the relative location of a robot
+                - led our team through a major microcontroller version upgrade that resulted in the migration from C to C++ programming
+                "
+                date="2018-2021"
+                imgsrc="images/experience/Robot.png"
+                grade=""
+                tools="cpp c"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2018-2021_RoboticsTeam/CompetitionCode"
+                glow
+            ></card-elem>
+            <card-elem
+                title="Head of Events"
+                subtitle="STEM Fellowship Club"
+                description="Planned, organized, and hosted workshops related to the Science, Technology, Engineering, Mathematics (STEM) strands.<br /><br />Hosted workshops include:
+                - mathematical aspect of data analysis: statistics
+                - physics preparation for the University of British Columbia (UBC) Michael Smith Challenge (MSC) contest
+                - chemistry preparation for the UBC MSC contest
+                - writing a scientific research paper for the Scholarly Writing Challenge (SWC)
+                "
+                date="2020-2021"
+                imgsrc="images/experience/STEMFellowshipClub.png"
+                grade=""
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Workshop Coordinator"
+                subtitle="Workshop Day for Grade 9s: Computer Club"
+                description="Coordinated the planning, marketing, and delivering of the workshop with our executive team that resulted in 91% of participants to express their intention to join the club."
+                date="18 May 2021"
+                imgsrc="images/experience/WorkshopDayComputerClub.png"
+                grade=""
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Workshop Coordinator"
+                subtitle="Workshop Day for Grade 9s: Robotics Team"
+                description="Fostered a sense of community that resulted in 86% of participants to express that the workshop helped them meet new people with common interests that they would not have had the opportunity to meet otherwise."
+                date="18 May 2021"
+                imgsrc="images/experience/WorkshopDayRoboticsTeam.png"
+                grade=""
+                tools=""
+                locations="github,https://github.com/vincentzhang15/projects-for-school/blob/main/2018-2021_RoboticsTeam/Grade9VirtualWorkshop_VEXRoboticsTeam.pdf"
+            ></card-elem>
+        </div>
+
+        <div class="btn-container">
+            <div class="btn-showhide">Show All</div>
+        </div>
+
+    </section>
+
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="container">
+            <square-elem img="py" label="Python 3"></square-elem>
+            <square-elem img="java" label="Java"></square-elem>
+            <square-elem img="cpp" label="C++"></square-elem>
+            <square-elem img="c" label="C"></square-elem>
+            <square-elem img="js" label="JavaScript"></square-elem>
+            <square-elem img="jq" label="jQuery"></square-elem>
+            <square-elem img="html" label="HTML"></square-elem>
+            <square-elem img="css" label="CSS"></square-elem>
+            <square-elem img="vue" label="Vue"></square-elem>
+            <square-elem img="react" label="React"></square-elem>
+            <square-elem img="tf" label="TensorFLow"></square-elem>
+            <square-elem img="mysql" label="MySQL"></square-elem>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="box">
+            <card-elem
+                title="Personal Website"
+                subtitle=""
+                description="- created dynamic custom elements that improves readability, maintenance, clarity, and consistency
+                - recursive star spawning
+                - 3 layer custom parallax"
+                date="28 December 2021 - 04 January 2022"
+                imgsrc="images/projects/PersonalWebsite.png"
+                grade=""
+                tools="js jq html css"
+                locations="github,https://github.com/vincentzhang15/vincentzhang15.github.io"
+                glow
+            ></card-elem>
+            <card-elem
+                title="Shop With Me (HTV 5 Hackathon)"
+                subtitle=""
+                description="Agumented reality shopping companion built with machine learning and computer vision."
+                date="15-17 October 2021"
+                imgsrc="images/projects/ShopWithMe.png"
+                grade=""
+                tools="tf mysql react py js html css"
+                locations="github,https://github.com/vincentzhang15/shop-with-me devpost,https://devpost.com/software/shop-with-me yt,https://www.youtube.com/watch?v=AbuC-q-aLcc"
+                glow
+            ></card-elem>
+            <card-elem
+                title="Coronavirus Analyzer"
+                subtitle=""
+                description="Graphical visualizer of covid data. See Github."
+                date="3 April 2021"
+                imgsrc="images/projects/CoronavirusAnalyzer.png"
+                grade=""
+                tools="java py cpp bat"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2021_Grade12/2021-04-03_CoronavirusAnalyzer yt,https://youtu.be/uIThynzcjJk"
+                glow
+            ></card-elem>
+            <card-elem
+                title="Account Manager"
+                subtitle=""
+                description="Conveniently stores account data offline."
+                date="6 May 2021"
+                imgsrc="images/projects/AccountManager.png"
+                grade=""
+                tools="java"
+                locations="github,https://github.com/vincentzhang15/account-manager"
+                glow
+            ></card-elem>
+            <card-elem
+                title="Startup Ideas Prototypes"
+                subtitle=""
+                description="Extensible project prototypes with huge business potential."
+                date="2017-Present"
+                imgsrc='<div class="icon-image"><span class="iconify" data-icon="el:idea"></span></div>'
+                grade=""
+                tools="py java bat"
+                locations="github,https://github.com/vincentzhang15/programming-fundamentals-and-techniques/tree/main/ConsolePrograms"
+                glow
+            ></card-elem>
+            <card-elem
+                title="Competitive Programming Practice"
+                subtitle=""
+                description="Solutions to competitive programming problems."
+                date="2017-Present"
+                imgsrc='<div class="icon-image"><span class="iconify" data-icon="fa-solid:laptop-code"></span></div>'
+                grade=""
+                tools="py java js c cpp php go hs cs pl"
+                locations="github,https://github.com/vincentzhang15/programming-fundamentals-and-techniques/tree/main/CompetitiveProgramming"
+                glow
+            ></card-elem>
+            <card-elem
+                title="Disc Shooter"
+                subtitle=""
+                description="3D ball and frisbee shooting game made with Java OpenGL."
+                date="12 Jun 2019"
+                imgsrc='images/projects/DiscShooter.png'
+                grade=""
+                tools="java"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2019_Grade10/2019-06-12_DiscGame"
+                glow
+            ></card-elem>
+            <card-elem
+                title="World Landmarks"
+                subtitle=""
+                description="Tourist information on some world landmarks."
+                date="26 Feb 2018"
+                imgsrc='images/projects/WorldLandmarks.png'
+                grade=""
+                tools="html css"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2018_Grade9/2018-02-25_WebsiteDesignProject web,https://zhang-vincent.github.io/home/"
+            ></card-elem>
+            <card-elem
+                title="Hardware Project"
+                subtitle=""
+                description="Documents the process of taking apart of a desktop computer."
+                date="11 Jun 2018"
+                imgsrc='images/projects/HardwareProject.png'
+                grade=""
+                tools="html css"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2018_Grade9/2018-06-11_HardwareProject web,https://zhang-vincent.github.io/hardware/"
+            ></card-elem>
+            <card-elem
+                title="Fortress Wars"
+                subtitle=""
+                description="Turn-based strategy game."
+                date="15-18 Jun 2018"
+                imgsrc='images/projects/FortressWars.png'
+                grade=""
+                tools="t"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2018_Grade9/2018-06-18_OptionalBonusProject"
+            ></card-elem>
+            <card-elem
+                title="Careers Project"
+                subtitle=""
+                description="Multi-page GUI application written in 99 lines."
+                date="21 May 2018"
+                imgsrc='images/projects/CareersProject.png'
+                grade=""
+                tools="t"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2018_Grade9/2018-05-21_CareersProject"
+            ></card-elem>
+            <card-elem
+                title="Quiz Time!"
+                subtitle=""
+                description="Interactive math quiz."
+                date="2 Apr 2019"
+                imgsrc='images/projects/QuizTime.png'
+                grade=""
+                tools="java"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/blob/main/2019_Grade10/2019-03-30_MakeAQuiz/QuizAssignment.java"
+            ></card-elem>
+            <card-elem
+                title="Black Jack"
+                subtitle=""
+                description="CLI Black Jack card game with sound."
+                date="16 May 2019"
+                imgsrc='images/projects/BlackJack.png'
+                grade=""
+                tools="java"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/blob/main/2019_Grade10/2019-05-16_BlackJack/BlackJack.java"
+            ></card-elem>
+            <card-elem
+                title="Sort Data"
+                subtitle=""
+                description="Sorting algorithms: bubble, insertion, selection, shell."
+                date="19 Apr 2019"
+                imgsrc='images/projects/SortData.png'
+                grade=""
+                tools="java"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/blob/main/2019_Grade10/2019-04-19_SortingAndMethods/SortingAndMethodsAssignment.java"
+            ></card-elem>
+            <card-elem
+                title="Rock Paper Scissors Lizard Spock"
+                subtitle=""
+                description="Invented algorithm that determines win/lose in one line, expanded to 3 lines for explanation."
+                date="28 Feb 2019"
+                imgsrc='images/projects/RPSLS.png'
+                grade=""
+                tools="java"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/blob/main/2019_Grade10/2019-02-28_RockPaperScissorsLizardSpock/RockPaperScissorsLizardSpock.java"
+            ></card-elem>
+        </div>
+
+        <div class="btn-container">
+            <div class="btn-showhide">Show All</div>
+        </div>
+
+    </section>
+
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="box">
+            <card-elem
+                title="Introduction to Computer Science II"
+                subtitle=""
+                description="In progress."
+                date="Jan - Apr, 2022"
+                imgsrc=''
+                grade="GPA __/4.0"
+                tools="c"
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Calculus II"
+                subtitle=""
+                description="In progress."
+                date="Jan - Apr, 2022"
+                imgsrc=''
+                grade="GPA __/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Linear Algebra I"
+                subtitle=""
+                description="In progress."
+                date="Jan - Apr, 2022"
+                imgsrc=''
+                grade="GPA __/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Preparing to Compete For Your Co-op Work Term"
+                subtitle=""
+                description="In progress."
+                date="Jan - Apr, 2022"
+                imgsrc=''
+                grade="GPA __/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Managing the Business Organization"
+                subtitle=""
+                description="In progress."
+                date="Jan - Apr, 2022"
+                imgsrc=''
+                grade="GPA __/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Introduction to Planet Earth"
+                subtitle=""
+                description="In progress."
+                date="Jan - Apr, 2022"
+                imgsrc=''
+                grade="GPA __/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Introduction to Computer Science I"
+                subtitle=""
+                description="Functions, Python data structures, searching, sorting, complexity."
+                date="Sep - Dec, 2021"
+                imgsrc=''
+                grade="GPA 4.0/4.0"
+                tools="py"
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Calculus I"
+                subtitle=""
+                description="Single variable differential calculus of algebraic and transcendental functions. Covers: set, supremum, infimum, limits, &delta;-&epsilon; proofs, continuity, IVT, EVT, MVT, Rolle's Theorem, Fermat's Theorem, derivative, differentiability, curve sketching, related rates, optimization
+                - 100% Final Exam score
+                - 106% Midterm Exam score
+                "
+                date="Sep - Dec, 2021"
+                imgsrc=''
+                grade="GPA 4.0/4.0"
+                tools=""
+                locations=""
+                glow
+            ></card-elem>
+            <card-elem
+                title="Discrete Mathematics"
+                subtitle=""
+                description="Combinatorics, discrete probability, proofs."
+                date="Sep - Dec, 2021"
+                imgsrc=''
+                grade="GPA 4.0/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Foundations for Success in Science Co-op"
+                subtitle=""
+                description="cover letter, r&eacute;sum&eacute;"
+                date="Sep - Dec, 2021"
+                imgsrc=''
+                grade="Grade A+"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Introduction to Business"
+                subtitle=""
+                description="Planning, organization, creating businesses."
+                date="Sep - Dec, 2021"
+                imgsrc=''
+                grade="GPA 4.0/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="Introduction to Media Studies"
+                subtitle=""
+                description="Analyze media through 12 lenses: Marxist, Organizational, Pragmatic, Rhetorical, Cultural, Psychoanalytic, Feminist, Queer, Reception, Sociological, Erotic, Ecological."
+                date="Sep - Dec, 2021"
+                imgsrc=''
+                grade="GPA 4.0/4.0"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="IB Higher Level Computer Science"
+                subtitle=""
+                description="OOP, ADT, Networks, Computer Organization, Resource Management, Control, System fundamentals, Computational thinking, problem-solving and programming."
+                date="High School"
+                imgsrc=''
+                grade="Grade 100%"
+                tools="java"
+                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2021_Grade12/Homework"
+                glow
+            ></card-elem>
+            <card-elem
+                title="IB Physics"
+                subtitle=""
+                description="Mechanics, Thermal Physics, Waves, Atomic, Nuclear and Particle Physics, Circular Motion and Gravitation, Electricity and Magnetism, Energy Production, Measurements and Uncertainties."
+                date="High School"
+                imgsrc=''
+                grade="Grade 98%"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="IB Chemistry"
+                subtitle=""
+                description="Stoichiometric Relationships, Atomic Structure, Periodicity, Chemical Bonding and Structure, Energetics/Thermochemistry, Chemical Kinetics, Equilibrium, Acids and Bases, Redox Processes, Organic Chemistry, Measurement and Data Processing."
+                date="High School"
+                imgsrc=''
+                grade="Grade 98%"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="IB Higher Level Mathematics: AA (Double Credits)"
+                subtitle=""
+                description="Algebra (series, sequence, proofs, combinatorics, complex numbers/plane/roots),
+                    Functions and equations,
+                    Circular functions and trigonometry,
+                    Vectors (planes, intersections),
+                    Statistics and probability,
+                    Calculus (integration),
+                    Differential Equations,
+                    Maclaurin Series.
+                "
+                date="High School"
+                imgsrc=''
+                grade="Grade 97% 96%"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="IB Higher Level Literature (English) (Double Credits)"
+                subtitle=""
+                description="Readers, writers and texts, Time and space, Intertextuality: connecting texts."
+                date="High School"
+                imgsrc=''
+                grade="Grade 93% 93%"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="IB Economics"
+                subtitle=""
+                description="Microeconomics, Macroeconomics, International Economics, Development Economics."
+                date="High School"
+                imgsrc=''
+                grade="Grade 93%"
+                tools=""
+                locations=""
+            ></card-elem>
+            <card-elem
+                title="IB Core French"
+                subtitle=""
+                description="Les th&egrave;mes: identit&eacute;s, exp&eacute;riences, ing&eacute;niosit&eacute; humaine, organisation sociale, partage de la plan&egrave;te."
+                date="High School"
+                imgsrc=''
+                grade="Grade 93%"
+                tools=""
+                locations=""
+            ></card-elem>
+        </div>
+
+        <div class="btn-container">
+            <div class="btn-showhide">Show All</div>
+        </div>
+
+    </section>
+
+    <section id="footer">
+        <div>Copyright &copy; 2022 Vincent Zhang. All rights reserved.</div>
+    </section>
+
+</body>
+
+</html>
