@@ -104,7 +104,7 @@ class Card extends HTMLElement {
 
         // Group courses by term for clarity.
         var date = this.attributes.date.value;
-        var fall2021 = date.includes("Dec, 2021") ? "fall2021" : "";
+        var fall2021 = date.includes("Dec, 2021") || date.includes("Aug, 2022") ? "fall2021" : "";
 
         // If image not provided, use the specified data, e.g., icon.
         var imgsrc = this.attributes.imgsrc.value;
