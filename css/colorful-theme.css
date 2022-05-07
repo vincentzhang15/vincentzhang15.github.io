@@ -9,30 +9,30 @@ Personal Website Project
 **************************** OVERALL DOCUMENT STYLES *****************************/
 /* WARNING: Removing comments in :root will make theme switch malfunction. */
 :root {
-    --background-color-1: #121212; /* #2c5f5d */
-    --background-color-2: #121212; /* #040d21 */
+    --background-color-1: #2c5f5d; /* #121212 */
+    --background-color-2: #040d21; /* #121212 */
 
-    --blue-heading-color-1: white; /* #4ce5e7 */
-    --blue-heading-color-2: white; /* #b2a7f5 */
+    --blue-heading-color-1: #4ce5e7; /* white */
+    --blue-heading-color-2: #b2a7f5; /* white */
 
-    --name-color-1: white; /* #ff7b71 */
-    --name-color-2: white; /* #fbd87c */
+    --name-color-1: #ff7b71; /* white */
+    --name-color-2: #fbd87c; /* white */
 
-    --section-heading-color-1: white; /* #70ffc8 */
+    --section-heading-color-1: #70ffc8; /* white */
     --section-heading-color-2: white; /* white */
 
-    --card-color-1: #1d1d1d; /* rgb(15, 14, 14) */
-    --card-color-2: #1d1d1d; /* #292323 */
+    --card-color-1: rgb(15, 14, 14); /* #1d1d1d */
+    --card-color-2: #292323; /* #1d1d1d */
 
-    --card-heading-color-1: #c1c1c1; /* #ffd57d */
-    --card-heading-color-2: #c1c1c1; /* #f28473 */
+    --card-heading-color-1: #ffd57d; /* #c1c1c1 */
+    --card-heading-color-2: #f28473; /* #c1c1c1 */
 
-    --button-border-color: white; /* rgba(255, 255, 255, 0.1) */
-    --button-background-color: rgba(255, 255, 255, 0.1); /* rgba(255, 255, 255, 0.09) */
-    --button-hover-color: rgba(255, 255, 255, 0.5); /* rgba(255, 255, 255, 0.21) */
+    --button-border-color: rgba(255, 255, 255, 0.1); /* white */
+    --button-background-color: rgba(255, 255, 255, 0.09); /* rgba(255, 255, 255, 0.1) */
+    --button-hover-color: rgba(255, 255, 255, 0.21); /* rgba(255, 255, 255, 0.5) */
 
-    --font-face: "Helvetica"; /* 'Red Hat Text' */
-    --letter-spacing: 0; /* -1px */
+    --font-face: 'Red Hat Text'; /* "Helvetica" */
+    --letter-spacing: -1px; /* 0 */
 
     --hover-color: #48e9b3;
     --major-color: #c1c1c1;
@@ -59,6 +59,7 @@ Personal Website Project
     --color-web: rgb(218, 215, 49);
 
     --small-icon-spacing: 12px;
+
 
 }
 

@@ -4,6 +4,7 @@ Personal Website Project
 @since 28 December 2021 - 04 January 2022
 */
 
+var isIdle = false
 
 // Navbar background appear disappear animation.
 window.onscroll = () => {
@@ -58,10 +59,14 @@ function makeStar(maxDelay) {
     });
     $(".background-stars").append(star);
 }
+
 function sustainStars() {
     // Make a star every 0.8 sec wtih 1s max delay.
-    makeStar(1);
-    setTimeout(sustainStars, 800);
+    if(!isIdle)
+    {
+        makeStar(1);
+        setTimeout(sustainStars, 800);
+    }
 }
 
 $(function () {
@@ -76,3 +81,31 @@ $(function () {
     // Sustain star spawning.
     sustainStars();
 })
+
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+function handleVisibilityChange() {
+    // Fixes issue when browser tab is in background, stars continuously spawn but animation does not happen so stars get cluttered and animation at once when user returns.
+    if (document.visibilityState === "hidden") {
+        isIdle = true;
+    } else {
+        isIdle = false;
+        sustainStars();
+    }
+}
+document.addEventListener("visibilitychange", handleVisibilityChange, false);
+
+
+// Toggle themes with VZ homepage button.
+document.addEventListener("DOMContentLoaded", function() { 
+    const key = document.querySelector("#logo");
+    const css = document.querySelector("#css-main");
+    key.addEventListener("click", function() {
+
+    if (css.getAttribute("href") == "css/main.css") {
+        css.href = "css/colorful-theme.css";
+    } else {
+        css.href = "css/main.css";
+    }
+    });
+});

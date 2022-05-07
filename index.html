@@ -6,15 +6,23 @@ Personal Website Project
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 
 <head>
+    <style>html{visibility:hidden; opacity:0;}</style> <!-- CSS needs time to load first time changing themes. Flash white instead of flashing unstyled content. -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Fonts 'Red Hat Font'. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet"> 
+    <!-- https://fonts.google.com/specimen/Red+Hat+Text?preview.text=Give%20your%20code%20a%20home%20in%20the%20cloud&preview.text_type=custom#standard-styles -->
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> <!-- Icons (Github, YT, LinkedIn). -->
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css" id="css-main" />
     <link rel="stylesheet" href="css/custom-elements.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,7 +42,7 @@ Personal Website Project
         <div id="nav-bg"></div>
         <div id="navbar">
             <ul>
-                <li id="logo"><a target="_self" href="#home">VZ</a></li>
+                <li id="logo"><a target="_self" href="#top">VZ</a></li>
                 <li><a target="_self" href="#about">About</a></li>
                 <li><a target="_self" href="#experience">Experience</a></li>
                 <li><a target="_self" href="#skills">Skills</a></li>
@@ -54,8 +62,10 @@ Personal Website Project
         <div id="profile-data">
             <div>
                 <h1 id="name">Vincent Zhang</h1>
+                <h1>Co-Op <span class="blue-heading">Computer Science</span></h1>
                 <h1>University of Toronto</h1>
-                <h1>Co-Op Computer Science</h1>
+                <h1><span class="blue-heading">Entrepreneurship</span></h1>
+                <h1>Specialist Stream</h1>
             </div>
 
             <a href="https://github.com/vincentzhang15/projects-for-school/blob/main/Resume/Resume.pdf" class="button">
@@ -74,7 +84,7 @@ Personal Website Project
     <section id="about">
         <h2>About</h2>
         <div class="container">
-            <square-elem img="img_ut" cls="uoftLogo" label="4.0 (/4.0) cumulative GPA (2021 - Present)"></square-elem>
+            <!--square-elem img="img_ut" cls="uoftLogo" label="4.0 (/4.0) cumulative GPA (2021 - Present)"></square-elem-->
             <square-elem img="img_ib" label="IB Alumnus<br />(Top 9% Wordwide 2021)"></square-elem>
             <square-elem img="icon_award" label="Computer Science and Engineering Award<br />(Class of 2021)"></square-elem>
             <square-elem img="icon_grad" label="Ontario Scholar (97.0% Top 6 Course Average 2021)"></square-elem>
@@ -139,13 +149,13 @@ Personal Website Project
             <card-elem
                 title="Team Captain"
                 subtitle="Robotics Team"
-                description="- our team won the 2019 Toronto VEX Energy Award
-                - provided a positive role model of commitment, intensity, confidence, composure, and hustle
-                - inspired hope and optimism in difficult times
-                - cared for the safety and well-being of every member
-                - exemplified 110% effort at every meeting and game
-                - left a legacy of excellence and passion for robotics
-                - led the planning, designing, construction, and programming of our competition robot
+                description="- Our team won the 2019 Toronto VEX Energy Award
+                - Provided a positive role model of commitment, intensity, confidence, composure, and hustle
+                - Inspired hope and optimism in difficult times
+                - Cared for the safety and well-being of every member
+                - Exemplified 110% effort at every meeting and game
+                - Left a legacy of excellence and passion for robotics
+                - Led the planning, designing, construction, and programming of our competition robot
                 "
                 date="2019-2021"
                 imgsrc="images/experience/RoboticsTeam.png"
@@ -157,8 +167,8 @@ Personal Website Project
             <card-elem
                 title="Lead Programmer"
                 subtitle="Robotics Team"
-                description="- developed a polar vector equation that accurately calculates the relative location of a robot
-                - led our team through a major microcontroller version upgrade that resulted in the migration from C to C++ programming
+                description="- Developed a polar vector equation that accurately calculates the relative location of a robot
+                - Led our team through a major microcontroller version upgrade that resulted in the migration from C to C++ programming
                 "
                 date="2018-2021"
                 imgsrc="images/experience/Robot.png"
@@ -171,10 +181,10 @@ Personal Website Project
                 title="Head of Events"
                 subtitle="STEM Fellowship Club"
                 description="Planned, organized, and hosted workshops related to the Science, Technology, Engineering, Mathematics (STEM) strands.<br /><br />Hosted workshops include:
-                - mathematical aspect of data analysis: statistics
-                - physics preparation for the University of British Columbia (UBC) Michael Smith Challenge (MSC) contest
-                - chemistry preparation for the UBC MSC contest
-                - writing a scientific research paper for the Scholarly Writing Challenge (SWC)
+                - Mathematical aspect of data analysis: statistics
+                - Physics preparation for UBC Michael Smith Challenge
+                - Chemistry preparation for the UBC MSC
+                - Writing a scientific research paper for the Scholarly Writing Challenge
                 "
                 date="2020-2021"
                 imgsrc="images/experience/STEMFellowshipClub.png"
@@ -235,15 +245,36 @@ Personal Website Project
         <h2>Projects</h2>
         <div class="box">
             <card-elem
+                title="Automation API"
+                subtitle=""
+                description="- improved productivity by automating login process
+                - highly extensible; can merge with 'Account Manager' and various programs in 'Startup Ideas Prototypes'"
+                date="29 April 2022"
+                imgsrc="images/projects/AutomationAPI.png"
+                grade=""
+                tools="py"
+                locations="github,https://github.com/vincentzhang15/automation-api"
+            ></card-elem>
+            <card-elem
+                title="Agenda Timer"
+                subtitle=""
+                description="- improved awareness by clearly displaying upcomming deadlines and events"
+                date="02 April 2022"
+                imgsrc="images/projects/AgendaTimer.png"
+                grade=""
+                tools="py js html css"
+                locations="github,https://github.com/vincentzhang15/agenda-timer"
+            ></card-elem>
+            <card-elem
                 title="Personal Website"
                 subtitle=""
                 description="- created dynamic custom elements that improves readability, maintenance, clarity, and consistency
                 - recursive star spawning
                 - 3 layer custom parallax"
-                date="28 December 2021 - 04 January 2022"
+                date="28 December 2021 - 07 May 2022"
                 imgsrc="images/projects/PersonalWebsite.png"
                 grade=""
-                tools="js jq html css"
+                tools="js jq html css py"
                 locations="github,https://github.com/vincentzhang15/vincentzhang15.github.io"
                 glow
             ></card-elem>
@@ -266,7 +297,7 @@ Personal Website Project
                 imgsrc="images/projects/CoronavirusAnalyzer.png"
                 grade=""
                 tools="java py cpp bat"
-                locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2021_Grade12/2021-04-03_CoronavirusAnalyzer yt,https://youtu.be/uIThynzcjJk"
+                locations="github,https://github.com/vincentzhang15/coronavirus-analyzer yt,https://youtu.be/uIThynzcjJk"
                 glow
             ></card-elem>
             <card-elem
@@ -278,7 +309,6 @@ Personal Website Project
                 grade=""
                 tools="java"
                 locations="github,https://github.com/vincentzhang15/account-manager"
-                glow
             ></card-elem>
             <card-elem
                 title="Startup Ideas Prototypes"
@@ -289,7 +319,6 @@ Personal Website Project
                 grade=""
                 tools="py java bat"
                 locations="github,https://github.com/vincentzhang15/programming-fundamentals-and-techniques/tree/main/ConsolePrograms"
-                glow
             ></card-elem>
             <card-elem
                 title="Competitive Programming Practice"
@@ -300,7 +329,6 @@ Personal Website Project
                 grade=""
                 tools="py java js c cpp php go hs cs pl"
                 locations="github,https://github.com/vincentzhang15/programming-fundamentals-and-techniques/tree/main/CompetitiveProgramming"
-                glow
             ></card-elem>
             <card-elem
                 title="Disc Shooter"
@@ -311,7 +339,6 @@ Personal Website Project
                 grade=""
                 tools="java"
                 locations="github,https://github.com/vincentzhang15/projects-for-school/tree/main/2019_Grade10/2019-06-12_DiscGame"
-                glow
             ></card-elem>
             <card-elem
                 title="World Landmarks"
@@ -491,7 +518,7 @@ Personal Website Project
                 description="Complex numbers, system of linear equations, Gaussian reduction, matrix algebra, dependence/independence, rank equation, linear transformation of Euclidean n-space, determinants, eigenvalues, eigenvectors, diagonalization, characteristic polynomial, abstract vector spaces, subspaces, Cayley-Hamilton theorem."
                 date="Jan - Apr, 2022"
                 imgsrc=''
-                grade="GPA __/4.0"
+                grade="GPA 4.0/4.0"
                 tools=""
                 locations=""
             ></card-elem>
@@ -511,7 +538,7 @@ Personal Website Project
                 description="Managing, managers, marketing, products, pricing strategies, break-even analysis, promotion, place, operations, productivity, managing information, measuring performance (financial statements), managing capital (finance), managing human resources, motivation theories."
                 date="Jan - Apr, 2022"
                 imgsrc=''
-                grade="GPA __/4.0"
+                grade="GPA 4.0/4.0"
                 tools=""
                 locations=""
             ></card-elem>

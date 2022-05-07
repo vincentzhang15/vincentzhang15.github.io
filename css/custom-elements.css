@@ -24,7 +24,7 @@ card-elem:not([glow]) {
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
-    background-color: var(--card-color);
+    background-image: linear-gradient(to right, var(--card-color-1) 0%, var(--card-color-2) 100%);
     width: 500px;
     display: table;
     height: 96%; /* Remove if not using custom js component. */
@@ -40,7 +40,7 @@ card-elem:not([glow]) {
     word-wrap: break-word;
 }
 .item .grade {
-    min-width: 60px;
+    min-width: 70px;
     text-align: right;
     margin-left: 30px;
 }
@@ -61,8 +61,11 @@ card-elem:not([glow]) {
     widtH: 100%;
 }
 .item h1 {
-    text-align: center;
     font-size: 22px;
+    background: -webkit-linear-gradient(45deg, var(--card-heading-color-1), var(--card-heading-color-2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .item h2 {
     text-align: left;
@@ -89,5 +92,5 @@ card-elem:not([glow]) {
     color: transparent;
 }
 .fall2021 {
-    background-color: var(--fall2021-color);
+    background: var(--fall2021-color);
 }
